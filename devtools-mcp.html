@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevTools MCP · Google DevFest Workshop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="glass-panel">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand__title">Google DevFest Workshop</span>
+          <span class="brand__subtitle">Chrome DevTools MCP Server</span>
+        </div>
+        <div class="nav__links">
+          <a class="nav__link" href="index.html">首页</a>
+          <a class="nav__link" href="gdg-devfest.html">GDG & DevFest</a>
+          <a class="nav__link nav__link--active" href="devtools-mcp.html">DevTools MCP</a>
+          <a class="nav__link" href="about.html">关于我</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page">
+        <section class="glass-panel hero">
+          <p class="hero__kicker">Tech Focus</p>
+          <h1 class="hero__title">Chrome DevTools MCP Server 实战手记</h1>
+          <p class="hero__description">
+            MCP（Multi-Channel Protocol）让 DevTools 不再只是浏览器的附属面板，而是一个可编排的调试服务。通过 Server
+           ，我们可以让脚本、IDE、Agent 共享同一个调试上下文，缩短排查链路。
+          </p>
+          <div class="hero__cta">
+            <a class="button button--primary" href="#workflow">查看工作流</a>
+            <a class="button button--ghost" href="about.html">与我讨论实现</a>
+          </div>
+        </section>
+
+        <section class="glass-panel section">
+          <p class="card__kicker">Overview</p>
+          <h2 class="section__title">MCP Server 为何重要</h2>
+          <div class="grid grid--three">
+            <article class="card">
+              <p class="card__kicker">Connected</p>
+              <h3 class="card__title">统一上下文</h3>
+              <p class="card__text">
+                DevTools 与 CLI 共享同一份会话信息，调试命令可以直接读取浏览器状态，不需要重复采集。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card__kicker">Automation</p>
+              <h3 class="card__title">自动执行策略</h3>
+              <p class="card__text">
+                通过 MCP 将性能面板、Network、Console 的操作封装成脚本，结合 AI Agent 自动运行。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card__kicker">Collaboration</p>
+              <h3 class="card__title">跨团队调试</h3>
+              <p class="card__text">
+                后端、前端与测试可以同时接入 MCP Server，查看同一条 Trace 与诊断结论，实现“调试即文档”。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="workflow" class="glass-panel section">
+          <p class="card__kicker">Workflow</p>
+          <h2 class="section__title">我在 Workshop 中搭建的 MCP 工作流</h2>
+          <div class="split">
+            <div class="card">
+              <h3 class="card__title">01 · 连接通道</h3>
+              <p class="card__text">
+                使用 Chrome DevTools 提供的 MCP Server 插件，先与浏览器建立安全通道，再通过 CLI
+                注册到同一个会话空间。
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">02 · 脚本化操作</h3>
+              <p class="card__text">
+                把 Network 过滤、性能录制、DOM 快照等操作封装成脚本，命名清晰，方便 Agent 调用。
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">03 · Insights 输出</h3>
+              <p class="card__text">
+                脚本抛出的结果通过 MCP 返回到 IDE，形成结构化报告，可直接贴到代码评审或缺陷跟踪系统。
+              </p>
+            </div>
+          </div>
+          <div class="quote" style="margin-top: 2rem">
+            <strong>一句话总结：</strong> DevTools MCP 让浏览器调试拥有了 API 化的接口——我可以把“经验动作”写成指令，再交给
+            Agent 或同伴重复执行。
+          </div>
+        </section>
+
+        <section class="glass-panel section">
+          <p class="card__kicker">Use Cases</p>
+          <h2 class="section__title">我已经计划落地的场景</h2>
+          <div class="grid grid--two">
+            <article class="card">
+              <h3 class="card__title">后端接口性能守护</h3>
+              <p class="card__text">
+                通过 MCP 自动触发链路压测，同时抓取 Waterfall，与服务端日志比对，快速定位慢查询。
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">回归测试伴侣</h3>
+              <p class="card__text">
+                在每次回归前执行固定的 DevTools 脚本，验证关键页面的 LCP、CLS 是否回退，异常直接同步到团队频道。
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">可观测性训练场</h3>
+              <p class="card__text">
+                将前端事件与后端指标关联起来，在 MCP 中标记里程碑，帮助新人快速理解系统结构。
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Agent Pairing</h3>
+              <p class="card__text">
+                让 AI Agent 接手重复调试动作，人类聚焦在策略设计，确保效率与准确性兼得。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <footer>
+          DevTools MCP · 让调试具备可移植的工作流
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

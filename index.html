@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google DevFest Workshop · Chrome DevTools MCP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="glass-panel">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand__title">Google DevFest Workshop</span>
+          <span class="brand__subtitle">Chrome DevTools MCP Server</span>
+        </div>
+        <div class="nav__links">
+          <a class="nav__link nav__link--active" href="index.html">首页</a>
+          <a class="nav__link" href="gdg-devfest.html">GDG & DevFest</a>
+          <a class="nav__link" href="devtools-mcp.html">DevTools MCP</a>
+          <a class="nav__link" href="about.html">关于我</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page">
+        <section class="glass-panel hero">
+          <p class="hero__kicker">DEVFEST 2024 · WORKSHOP</p>
+          <h1 class="hero__title">
+            深入 Chrome DevTools MCP Server，打造更自信的调试体验
+          </h1>
+          <p class="hero__description">
+            这场 Workshop 记录了我在 Google DevFest 的实践旅程：如何用全新的 DevTools MCP
+            能力把调试、自动化和协作串成一体。从动手实验到方法论沉淀，全部浓缩在这里。
+          </p>
+          <div class="hero__cta">
+            <a class="button button--primary" href="devtools-mcp.html">探索 MCP 实战</a>
+            <a class="button button--ghost" href="gdg-devfest.html">了解 GDG 社区</a>
+          </div>
+        </section>
+
+        <section class="glass-panel section">
+          <p class="card__kicker">Highlights</p>
+          <h2 class="section__title">Workshop 核心亮点</h2>
+          <p class="section__subtitle">让我印象深刻的 3 个瞬间</p>
+          <div class="grid grid--three">
+            <article class="card">
+              <p class="card__kicker">Live Coding</p>
+              <h3 class="card__title">DevTools + MCP 的双向协作</h3>
+              <p class="card__text">
+                通过 MCP Server 把 IDE、浏览器与智能体联动，现场演示如何在 DevTools 中直接驱动调试脚本并实时同步代码。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card__kicker">Hands-on</p>
+              <h3 class="card__title">性能洞察自动化</h3>
+              <p class="card__text">
+                使用 Performance Insights API 抓取真实指标，结合脚本快速定位 LCP 与 CLS 的瓶颈，让调优反馈小于 1 分钟。
+              </p>
+            </article>
+            <article class="card">
+              <p class="card__kicker">Community</p>
+              <h3 class="card__title">GDG 同行交流</h3>
+              <p class="card__text">
+                结识了来自不同城市的开发者，针对后端、前端与 AI Agent 的落地案例展开讨论，获得大量灵感。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="glass-panel section">
+          <p class="card__kicker">Agenda</p>
+          <h2 class="section__title">半天密集式冲刺</h2>
+          <p class="section__subtitle">聚焦 MVP 体验，边学边产出</p>
+          <div class="split">
+            <div>
+              <ul class="timeline">
+                <li class="timeline__item">
+                  <p class="timeline__time">09:30 · Kickoff</p>
+                  <h3 class="timeline__title">Google DevFest 开场与 GDG 现状</h3>
+                  <p class="timeline__description">
+                    了解全球社区的最新议题，确认本次 Workshop 的目标与预期成果。
+                  </p>
+                </li>
+                <li class="timeline__item">
+                  <p class="timeline__time">10:10 · Labs 01</p>
+                  <h3 class="timeline__title">MCP Server 基础连线</h3>
+                  <p class="timeline__description">
+                    使用 Chrome DevTools MCP Server 接入 CLI 与浏览器，配置第一个自动化脚本。
+                  </p>
+                </li>
+                <li class="timeline__item">
+                  <p class="timeline__time">11:05 · Labs 02</p>
+                  <h3 class="timeline__title">性能洞察与调试策略</h3>
+                  <p class="timeline__description">
+                    将 Trace、Lighthouse 与自定义指标串联，完成一次端到端的性能诊断。
+                  </p>
+                </li>
+                <li class="timeline__item">
+                  <p class="timeline__time">12:00 · Share</p>
+                  <h3 class="timeline__title">作品回顾与收获</h3>
+                  <p class="timeline__description">
+                    Showcase 最终 Demo，记录行动清单，把灵感带回日常开发。
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <p class="card__kicker">Focus</p>
+              <h3 class="card__title">关键产出</h3>
+              <p class="card__text">
+                · 一套 DevTools MCP 调试流程脚本<br />
+                · 针对后端接口的性能诊断报告<br />
+                · 下一阶段的自动化实验计划
+              </p>
+              <div class="pill-list" style="margin-top: 1.5rem">
+                <span class="pill">Live Share</span>
+                <span class="pill">Performance Insights</span>
+                <span class="pill">AI Assistants</span>
+                <span class="pill">Chrome DevTools</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="glass-panel section">
+          <p class="card__kicker">Numbers</p>
+          <h2 class="section__title">现场数据速记</h2>
+          <p class="section__subtitle">把感受量化，更好复盘</p>
+          <div class="stats">
+            <article class="stat-card">
+              <p class="stat-card__value">4+</p>
+              <p class="stat-card__label">小时 Hands-on 时间</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-card__value">12</p>
+              <p class="stat-card__label">DevTools 调试脚本实验</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-card__value">30+</p>
+              <p class="stat-card__label">GDG 伙伴互联</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-card__value">3</p>
+              <p class="stat-card__label">立即落地的自动化想法</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="glass-panel section cta">
+          <p class="card__kicker">Next</p>
+          <h2 class="cta__title">把 Workshop 的灵感带入日常迭代</h2>
+          <p class="cta__text">
+            继续在项目里尝试 DevTools MCP 的自动化调试方法，也欢迎与我交流后端场景下的最佳实践。
+          </p>
+          <a class="button button--primary" href="about.html">联系胡明泽</a>
+        </section>
+
+        <footer>
+          Google DevFest Workshop · Chrome DevTools MCP Server · 胡明泽
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
